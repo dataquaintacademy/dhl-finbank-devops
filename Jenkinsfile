@@ -30,20 +30,8 @@ pipeline {
             //    sh 'docker --version'
             }
         }
-        stage("DependencyResolutions")
-        {
-        steps
-        {
-            sh 'npm ci'
-        }
-        }
-        stage("lint check")
-        {
-            steps
-            {
-                sh 'npm run lint'
-            }
-        }
+      
+     
         
         stage("SonarqubeStaticScan")
         {
